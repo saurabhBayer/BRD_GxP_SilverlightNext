@@ -1,0 +1,8 @@
+FROM node:20
+RUN mkdir -p /usr/src/passlink-platform
+WORKDIR /usr/src/passlink-platform
+COPY package.json /usr/src/passlink-platform
+RUN npm install
+COPY . /usr/src/passlink-platform
+EXPOSE 3003
+CMD ["npm","start"]
