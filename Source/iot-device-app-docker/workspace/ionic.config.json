@@ -1,0 +1,7 @@
+{
+  "name": "iot-device-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
