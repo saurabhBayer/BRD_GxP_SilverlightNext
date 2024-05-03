@@ -38,7 +38,6 @@ dev-docker$ ## Develop within docker container..
 - Reference: https://capacitorjs.com/docs/getting-started/with-ionic
 - Steps:
     ```console
-
     dev-docker$ cd ${PROJECT_PATH}/workspace
 
     dev-docker$ # Create Ionic Project, PROJECT_NAME=iot-device-app
@@ -50,6 +49,24 @@ dev-docker$ ## Develop within docker container..
 
     dev-docker$ rm -rf .git # Delete git folder inside workspace
     dev-docker$ chmod -R 777 * # Optional: Set permission
+    ```
+
+### 2.2.2. Setup iOS
+- Reference: https://github.com/imaxeon-bayer-connect/portal-app/blob/main/doc/setup.md
+- Prerequisites: macOS, XCode
+- Steps:
+    ```console
+    dev-docker$ cd ${PROJECT_PATH}/workspace
+    dev-docker$ ionic capacitor add ios
+    ```
+
+### 2.2.3. Setup Android
+- Reference: https://github.com/imaxeon-bayer-connect/portal-app/blob/main/doc/setup.md
+- Prerequisites: macOS/Linux/Windows, Android Studio
+- Steps:
+    ```console
+    dev-docker$ cd ${PROJECT_PATH}/workspace
+    dev-docker$ ionic capacitor add android
     ```
 
 <br>
