@@ -18,7 +18,15 @@
 
 # 2. Project Setup <a name="ProjectSetup"></a>
 
-## 2.1. Setup Environment
+## 2.1. Create Dev Docker Image
+```console
+$ cd ${PROJECT_PATH}
+
+$ # Build dev docker image
+$ docker compose build dev
+```
+
+## 2.2. Setup Environment
 > Use DEV Docker Image to setup the project
 ```console
 $ cd ${PROJECT_PATH}
@@ -26,15 +34,15 @@ $ cd ${PROJECT_PATH}
 $ # Ensure permission access is resolved between host and docker environment
 $ sudo chmod -R o+w . 
 
-$ # Run Development docker container
+$ # Run dev docker container
 $ docker compose run --rm dev bash
 
 dev-docker$ ## Develop within docker container..
 ```
 
-## 2.2. Steps
+## 2.3. Setup Project
 
-### 2.2.1. Create Ionic Project
+### 2.3.1. Create Ionic Project
 - Reference: https://capacitorjs.com/docs/getting-started/with-ionic
 - Steps:
     ```console
@@ -51,7 +59,7 @@ dev-docker$ ## Develop within docker container..
     dev-docker$ chmod -R 777 * # Optional: Set permission
     ```
 
-### 2.2.2. Setup iOS
+### 2.3.2. Setup iOS
 - Reference: https://github.com/imaxeon-bayer-connect/portal-app/blob/main/doc/setup.md
 - Prerequisites: macOS, XCode
 - Steps:
@@ -60,7 +68,7 @@ dev-docker$ ## Develop within docker container..
     dev-docker$ ionic capacitor add ios
     ```
 
-### 2.2.3. Setup Android
+### 2.3.3. Setup Android
 - Reference: https://github.com/imaxeon-bayer-connect/portal-app/blob/main/doc/setup.md
 - Prerequisites: macOS/Linux/Windows, Android Studio
 - Steps:

@@ -11,7 +11,21 @@
 
 # 1. Development <a name="Development"></a>
 
-# 1.1. Web Development
+# 1.1. Run Dev Docker Container
+NOTES: 
+- Development is done inside the docker container
+- The docker image is capable of change dependent framework version (e.g. Node, Ionic)
+
+```console
+$ cd ${PROJECT_PATH}
+
+$ # Run Development docker container
+$ docker compose run --rm dev bash
+
+dev-docker$ ## Develop within docker container..
+```
+
+# 1.2. Web Development
 ```console
 dev-docker$ cd ${PROJECT_PATH}/workspace
 
