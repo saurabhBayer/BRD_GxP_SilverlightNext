@@ -1,6 +1,6 @@
 # Arguments 
 ARG NODE_VERSION=18.12.0
-ARG IONIC_CLI_VERSION=8.1.0
+ARG IONIC_CLI_VERSION=6.12.3
 
 # ---- Builder ---
 FROM node:${NODE_VERSION} AS base
@@ -20,7 +20,7 @@ RUN rm -rf /var/lib/apt/lists/*
 
 # Install npm packages
 #RUN npm install -g @ionic/cli@IONIC_CLI_VERSION cordova
-RUN npm install -g @ionic/cli@IONIC_CLI_VERSION
+RUN npm install -g @ionic/cli@$IONIC_CLI_VERSION
 
 
 USER node

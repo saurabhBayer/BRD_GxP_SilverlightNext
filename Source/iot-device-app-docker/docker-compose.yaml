@@ -1,10 +1,10 @@
 version: "3.7"
-name: iot-device-app
+name: silverlight-iot-device-app
 
 services:
   dev:
-    image: xsi-server-dev:${IMG_TAG:-latest}
-    container_name: xsi-server-dev
+    image: silverlight-iot-device-app-dev:${IMG_TAG:-latest}
+    container_name: silverlight-iot-device-app-dev
     build:
       context: .
       dockerfile: ./docker/dev.dockerfile      
@@ -31,7 +31,8 @@ services:
       - ./workspace:/home/node/workspace
       - ./cfg:/home/node/cfg  
       - ./logs:/home/node/logs            
-      
+  #rel:
+    # TODO:
 
     
 
