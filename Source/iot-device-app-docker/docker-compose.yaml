@@ -1,0 +1,55 @@
+version: "3.7"
+name: iot-device-app
+
+services:
+  dev:
+    image: xsi-server-dev:${IMG_TAG:-latest}
+    container_name: xsi-server-dev
+    build:
+      context: .
+      dockerfile: ./docker/dev.dockerfile      
+      #args:
+      #    NODE_VERSION: 18.12.0
+
+    user: ${CUR_UID:-1000:1000} # This is required in order to access host's filesystem from the docker container
+    network_mode: "host"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    environment:
+      - DISPLAY
+      - XAUTHORITY=/home/node/.Xauthority
+    devices:
+      - "/dev/snd:/dev/snd"
+    env_file:
+      - ${ENV_FILE_PATH:-env/.env}
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.bash_history:/home/node/.bash_history
+      - ~/.Xauthority:/home/node/.Xauthority
+      - ./workspace:/home/node/workspace
+      - ./cfg:/home/node/cfg  
+      - ./logs:/home/node/logs            
+      
+
+    
+
+# Commands
+
+# PREPARE
+# Set envfile path:    > export ENV_FILE_PATH=<env file path>
+
+# BUILD
+# - Build:             > docker compose build
+# - Build with args:   > docker compose build --build-arg NODE_VERSION="16.14.2"
+# - Build Clean:       > docker compose build --no-cache
+
+# RUN DEV CONTAINER
+# - Run Dev:           > docker compose run --rm dev bash
+
+# RUN REL
+# - Run with rm:       > docker compose run --rm rel 
+# - Run :              > docker compose up 
+# - Run envfile:       > docker compose --env-file $ENV_FILE_PATH
+# - Stop Rel:          > docker compose down
