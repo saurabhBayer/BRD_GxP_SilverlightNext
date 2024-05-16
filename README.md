@@ -2,7 +2,7 @@
 
 # project directories definition
 # iot-auth-api - common IOT login auth management endpoints
-# iot-device-app - mobile device app supporting iOS and android
+# iot-device-app-docker - mobile device app supporting iOS and android
 # iot-libraries - common IOT business logic libraries 
 # passlink-api - endpoints for passlink based functions 
 # passlink-app - ui for passlink based functions 

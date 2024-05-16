@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.bayer.ph.passlinkmobiledev;
 
 import com.getcapacitor.BridgeActivity;
 
