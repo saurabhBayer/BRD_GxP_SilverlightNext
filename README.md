@@ -1,5 +1,5 @@
 # Saurabh 05/01/2024 ver. 1 - setting up BRD_GxP_SilverlightNext project structure
-# Saurabh 05/25/2024 ver. 1.1 - drafting BRD_GxP_SilverlightNext project Release tasks 
+# Saurabh 05/25/2024 ver. 1.1 - drafting BRD_GxP_SilverlightNext project Release R2 tasks 
 
 
 # project abbreviations 
