@@ -10,11 +10,13 @@ exports.ConfigDataModule = void 0;
 const common_1 = require("@nestjs/common");
 const config_data_controller_1 = require("./config-data.controller");
 const config_data_service_1 = require("./config-data.service");
+const database_module_1 = require("../database/database.module");
 let ConfigDataModule = class ConfigDataModule {
 };
 exports.ConfigDataModule = ConfigDataModule;
 exports.ConfigDataModule = ConfigDataModule = __decorate([
     (0, common_1.Module)({
+        imports: [database_module_1.DatabaseModule],
         controllers: [config_data_controller_1.ConfigDataController],
         providers: [config_data_service_1.ConfigDataService],
     })

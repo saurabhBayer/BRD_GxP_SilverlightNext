@@ -1,5 +1,5 @@
 export declare class ConfigData {
-    name: string;
+    _id: string;
     configId: string;
     keyName: string;
     keyValue: string;

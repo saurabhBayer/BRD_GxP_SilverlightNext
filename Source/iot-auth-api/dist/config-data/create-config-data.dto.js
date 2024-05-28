@@ -9,25 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ConfigData = void 0;
-const swagger_1 = require("@nestjs/swagger");
-class ConfigData {
+exports.CreateConfigData = void 0;
+const class_validator_1 = require("class-validator");
+class CreateConfigData {
 }
-exports.ConfigData = ConfigData;
+exports.CreateConfigData = CreateConfigData;
 __decorate([
-    (0, swagger_1.ApiProperty)({ example: 1, description: "MongoDb Id" }),
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], ConfigData.prototype, "_id", void 0);
+], CreateConfigData.prototype, "configId", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)({ example: 1, description: "Passlink ConfigData Id" }),
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], ConfigData.prototype, "configId", void 0);
+], CreateConfigData.prototype, "keyName", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)({ example: "tokenExpiresIn", description: "Passlink ConfigData Name" }),
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], ConfigData.prototype, "keyName", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)({ example: "7d", description: "Passlink ConfigData keyValue" }),
-    __metadata("design:type", String)
-], ConfigData.prototype, "keyValue", void 0);
-//# sourceMappingURL=config-data.entity.js.map
+], CreateConfigData.prototype, "keyValue", void 0);
+//# sourceMappingURL=create-config-data.dto.js.map

@@ -1,13 +1,16 @@
-import { IsInt, IsString } from "class-validator";
+import { IsOptional, IsString } from "class-validator";
 
-export class CreateConfigData {
+export class UpdateConfigData {
   //(create data to object)
+  @IsOptional()
   @IsString()
   readonly configId: string;
 
+  @IsOptional()
   @IsString()
   readonly keyName: string;
 
+  @IsOptional()
   @IsString()
   readonly keyValue: string;
 }

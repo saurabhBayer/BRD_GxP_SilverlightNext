@@ -9,7 +9,7 @@ async function bootstrap() {
         .setTitle("Passlink Auth API")
         .setDescription("The Passlink API description")
         .setVersion("1.0")
-        .addTag("users")
+        .addTag("Passlink Cloud APIs")
         .addBearerAuth()
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, options);

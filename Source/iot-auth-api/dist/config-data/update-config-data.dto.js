@@ -9,21 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateConfigData = void 0;
+exports.UpdateConfigData = void 0;
 const class_validator_1 = require("class-validator");
-class CreateConfigData {
+class UpdateConfigData {
 }
-exports.CreateConfigData = CreateConfigData;
+exports.UpdateConfigData = UpdateConfigData;
 __decorate([
+    (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateConfigData.prototype, "configId", void 0);
+], UpdateConfigData.prototype, "configId", void 0);
 __decorate([
+    (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateConfigData.prototype, "keyName", void 0);
+], UpdateConfigData.prototype, "keyName", void 0);
 __decorate([
+    (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateConfigData.prototype, "keyValue", void 0);
-//# sourceMappingURL=get-config-data.dto.js.map
+], UpdateConfigData.prototype, "keyValue", void 0);
+//# sourceMappingURL=update-config-data.dto.js.map
