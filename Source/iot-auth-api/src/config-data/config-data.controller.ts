@@ -17,18 +17,19 @@ export class ConfigDataController {
   constructor(private readonly configDataService: ConfigDataService) {}
 
   @Get(":sourceSystem")
+  @ApiOperation({ summary: 'Get Config Items' })
   @ApiResponse({
     status: 200,
     description: "Records Found",
     type: ConfigData,
-  })
+  }) 
   async getAllConfigData(@Param("sourceSystem") sourceSystem: string): Promise<ConfigData[]> {
     // todo: log the sourceSystem
     return this.configDataService.find();
   }
 
-  @Get(":sourceSystem")
-  @ApiOperation({ summary: 'Get Config Item' })
+  @Get(":sourceSystem, :configId")
+  @ApiOperation({ summary: 'Get Config Item By Id' })
   @ApiResponse({
     status: 200,
     description: "Record Found",

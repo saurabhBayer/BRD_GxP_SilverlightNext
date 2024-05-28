@@ -39,6 +39,7 @@ let ConfigDataController = class ConfigDataController {
 exports.ConfigDataController = ConfigDataController;
 __decorate([
     (0, common_1.Get)(":sourceSystem"),
+    (0, swagger_1.ApiOperation)({ summary: 'Get Config Items' }),
     (0, swagger_1.ApiResponse)({
         status: 200,
         description: "Records Found",
@@ -50,8 +51,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ConfigDataController.prototype, "getAllConfigData", null);
 __decorate([
-    (0, common_1.Get)(":sourceSystem"),
-    (0, swagger_1.ApiOperation)({ summary: 'Get Config Item' }),
+    (0, common_1.Get)(":sourceSystem, :configId"),
+    (0, swagger_1.ApiOperation)({ summary: 'Get Config Item By Id' }),
     (0, swagger_1.ApiResponse)({
         status: 200,
         description: "Record Found",
