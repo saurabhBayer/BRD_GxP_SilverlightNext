@@ -5,5 +5,5 @@ export class DATABASE_CONSTANTS {
     static COLLECTION_NAME_ConfigData = "configdata";
     static COLLECTION_NAME_LogData = "logdata";
     static COLLECTION_NAME_UserProfiles = "userprofiles";
-    static COLLECTION_NAME_Users = "users";
+
 }

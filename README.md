@@ -25,7 +25,7 @@
 # project detail coverage
 
 #PLC Infra - Git Repo: ..separate repo
-# spin up EC2s and cloud configurations (teraform scripts)
+# spin up EC2s and cloud logurations (teraform scripts)
 1) spin up EC2s for DEV, STG, QA, PROD
 2) ..
 

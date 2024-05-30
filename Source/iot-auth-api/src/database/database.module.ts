@@ -18,8 +18,7 @@ import { DATABASE_CONSTANTS } from './database.constants';
 
                     await db.collection(DATABASE_CONSTANTS.COLLECTION_NAME_ConfigData).createIndex({ configId: 1 }, { unique: true, sparse: true });
                     await db.collection(DATABASE_CONSTANTS.COLLECTION_NAME_LogData).createIndex({ logId: 1 }, { unique: true, sparse: true });
-                    await db.collection(DATABASE_CONSTANTS.COLLECTION_NAME_UserProfiles).createIndex({ profileId: 1 }, { unique: true, sparse: true });
-                    await db.collection(DATABASE_CONSTANTS.COLLECTION_NAME_Users).createIndex({ userId: 1 }, { unique: true, sparse: true });
+                    await db.collection(DATABASE_CONSTANTS.COLLECTION_NAME_UserProfiles).createIndex({ UserDbId: 1 }, { unique: true, sparse: true });
 
                     return db;
                 } catch (e) {

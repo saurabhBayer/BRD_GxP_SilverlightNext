@@ -2,3 +2,5 @@
 Source/iot-auth-api/node_modules/
 
 Source/iot-auth-api/dist/
+
+*.js
