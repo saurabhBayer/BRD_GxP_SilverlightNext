@@ -24,48 +24,50 @@
 
 # project detail coverage
 
-#PLC Infra - Git Repo: ..separate repo
+## PLC Infra - Git Repo: silverlight-passlink-infra
 # spin up EC2s and cloud logurations (teraform scripts)
 1) spin up EC2s for DEV, STG, QA, PROD
 2) ..
 
-#PLC API - Git Repo: Passlink_ServerAPI
+## PLC API - Git Repo: BRD_GXP_Passlink_ServerAPI
 # APIs for user management (PLC APP) - on Bayer VPN Gateway only
 # APIs for mobile users (PLC Mobile APP) & PLM - on Public domain
 1) set NestJS Framework
 2) spin up mongoDB instance 
 3) define and set user and appLog object (without mongoose)
-4) create 1st APIs - upsertUser (to insert, update, inactive)
-5) create 2nd API - loginUser for PLC App (private with static JWT Auth)
-6) create 3rd API - loginUser for PLM App (public with dynamic JWT Auth)
-7) create 4th API - appLog for PLM, PLC App for User Info (public with dynamic JWT Auth)
-(* UserLog contains only user login time, user accepting terms conditions, user reseting password only. In this release, it will not contain Mobile-Injector connectivty or Injector Service Tool logs)
-8) docker script for API hosting 
-9) unit testing setup with jasmine
+4) create APIs - upsert config params (to insert, update, inactive)
+5) create APIs - upsertUser (to insert, update, inactive)
+6) create API - loginUser for PLC App (dynamic JWT Auth)
+7) create API - loginUser for PLM App (dynamic JWT Auth)
+8) create API - appLog for PLM, PLC App for User Info (dynamic JWT Auth)
+(* UserLog contains only user login time, user accepting terms conditions, user reseting password only. 
+ * In this release, it will not contain Mobile-Injector connectivty or Injector Service Tool logs)
+9) docker scripts for API hosting 
+10) unit testing setup with jasmine
 
-#PLC APP
-# web app for user management
+## PLC UI APP (Web + Mobile)- Git Repo: BRD_GxP_Passlink_ClientApp
+# UI for user management web app
 1) setup Angular, NestJs Framework, scss*?
 2) screen for login page
 3) master screen for user dashboard page
 4) modal popup screen for user insert, update 
 5) screen for user activty log viewer 
-
-#PLC Mobile APP  - merge with PLC App or PLM App?
-# web app for mobile devices
+# UI for mobile devices web app
 1) setup Angular, NestJs Framework with capacitor, ionic, tailwind css*?
 2) screen for login page
 3) screen for service access option
 4) screen for wired and QR code option
 5) screen for user profile
+ basic unit testing setup with angular, jasmine, protactor
 
-#PLM - Git Repo: Passlink_Mobile
+## PLM - Git Repo: BRD_GxP_Passlink_MobileApp
 # bare bone mobile app for iOS and Android
 1) setup Angular, NestJs Framework with capacitor, ionic
 2) backend interfaces for biometric, usb data transfer, web message transfer, mobile settings transfer like keychain data, theme, etc
+3) basic unit testing
 
-#PLA - Git Repo: Passlink_Platform
-# APIs for Mobile app & Injector connection. 
+## PLA - Git Repo: BRD_GxP_Passlink_Platform
+# APIs for Mobile app & Injector connections. 
 1) set NestJS Framework
 2) backend interfaces for Mobile app & Injector connection like handshake, cipher usb data transfer
 3) backend interface for QR code cipher interpreter 
@@ -73,4 +75,5 @@
 5) create API for unlock via QR code 
 6) create API for unlock via wired code 
 7) installer script for run app as windows service
+8) unit testing setup with jasmine
 
